@@ -7,7 +7,6 @@
     tags: [fast, api, fastapi]
     when: '"api_server" in group_names'
     notify:
-      - Enable the fastapi service
       - Start the fastapi service
 
   - name: put systemd file in place
@@ -17,7 +16,6 @@
     tags: [fast, api, fastapi]
     when: '"api_server" in group_names'
     notify:
-      - Enable the fastapi service
       - Start the fastapi service
 
 

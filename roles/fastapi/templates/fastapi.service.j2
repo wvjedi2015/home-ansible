@@ -1,0 +1,14 @@
+[UNIT]
+Description=FASTAPI
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/FASTAPI
+LimitNOFILE=4096
+ExecStart=uvicorn --host Ansible-Control main:app --reload
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target

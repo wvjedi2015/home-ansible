@@ -1,0 +1,11 @@
+---
+# tasks file for get_hn
+
+- name: Upgrade the OS (apt-get dist-upgrade)
+  ansible.builtin.apt:
+    upgrade: dist 
+
+- name: Install pip
+  apt:
+    name: pip
+    state: latest

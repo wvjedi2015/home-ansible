@@ -1,0 +1,12 @@
+---
+# handlers file for fastapi
+
+  - name: Enable the fastapi service
+    service:
+      name: fastapi.service
+      state: enabled
+
+  - name: Start the fastapi service
+    service:
+      name: fastapi.service
+      state: started

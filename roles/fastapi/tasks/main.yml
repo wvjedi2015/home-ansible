@@ -1,0 +1,24 @@
+---
+# tasks file for fastapi
+
+  - name: Installing fastapi
+    pip:
+      name: fastapi[all]
+    tags: [fast, api, fastapi]
+    when: '"api_server" in group_names'
+    notify:
+      - Enable the fastapi service
+      - Start the fastapi service
+
+  - name: put systemd file in place
+    template:
+      src: templates/fastapi.service.j2
+      dest: /etc/systemd/system/fastapi.service
+    tags: [fast, api, fastapi]
+    when: '"api_server" in group_names'
+    notify:
+      - Enable the fastapi service
+      - Start the fastapi service
+
+
+ 

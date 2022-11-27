@@ -1,0 +1,10 @@
+---
+# tasks file for cron
+
+- name: Creates an entry like "@reboot /some/job.sh"
+  cron:
+    name: "Check for updates to Ansible repo and deploy them"
+    user4: root
+    minute: /5
+    job: "/usr/bin/ansible-pull -U https://github.com/wvjedi2015/home-ansible.git -C master -d /tmp/ANSIBLE -o /tm-/ANSIBLE/pull.yml"
+

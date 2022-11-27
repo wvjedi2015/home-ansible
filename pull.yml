@@ -2,8 +2,8 @@
 
   - name: Copying files and dirs out to the Ansible directory
     copy:
-      src: {{ item.src }}
-      dest: {{ item.dest }}
+      src: "{{ item.src }}"
+      dest: "{{ item.dest }}"
       preserve: yes
     with_items:
       - {item.src: /REPOS/ANSIBLE/ansible.cfg, item.dest: /ANSIBLE/ansible.cfg}

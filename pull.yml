@@ -11,5 +11,5 @@
       with_items:
         - {src: /tmp/ANSIBLE/ansible.cfg, dest: /ANSIBLE/ansible.cfg}
         - {src: /tmp/ANSIBLE/main.yml, dest: /ANSIBLE/main.yml}
-        - {src: /tmp/ANSIBLE/roles, dest: /ANSIBLE/roles}
-        - {src: /tmp/ANSIBLE/inventory, dest: /ANSIBLE/inventory}
+        - {src: /tmp/ANSIBLE/roles, dest: /ANSIBLE/}
+        - {src: /tmp/ANSIBLE/inventory, dest: /ANSIBLE/}

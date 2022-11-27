@@ -1,11 +1,14 @@
+- hosts: localhost
 
-  - name: Copying files and dirs out to the Ansible directory
-    copy:
-      src: "{{ item.src }}"
-      dest: "{{ item.dest }}"
-      preserve: yes
-    with_items:
-      - {item.src: /REPOS/ANSIBLE/ansible.cfg, item.dest: /ANSIBLE/ansible.cfg}
-      - {item.src: /REPOS/ANSIBLE/main.yml, item.dest: /ANSIBLE/main.yml}
-      - {item.src: /REPOS/ANSIBLE/roles, item.dest: /ANSIBLE/roles}
-      - {item.src: /REPOS/ANSIBLE/inventory, item.dest: /ANSIBLE/inventory}
+  tasks:
+
+    - name: Copying files and dirs out to the Ansible directory
+      copy:
+        src: "{{ item.src }}"
+        dest: "{{ item.dest }}"
+        preserve: yes
+      with_items:
+        - {item.src: /REPOS/ANSIBLE/ansible.cfg, item.dest: /ANSIBLE/ansible.cfg}
+        - {item.src: /REPOS/ANSIBLE/main.yml, item.dest: /ANSIBLE/main.yml}
+        - {item.src: /REPOS/ANSIBLE/roles, item.dest: /ANSIBLE/roles}
+        - {item.src: /REPOS/ANSIBLE/inventory, item.dest: /ANSIBLE/inventory}

@@ -7,7 +7,6 @@
         src: "{{ item.src }}"
         dest: "{{ item.dest }}"
         remote_src: yes
-        mode: preserve
       with_items:
         - {src: /tmp/ANSIBLE/ansible.cfg, dest: /ANSIBLE/ansible.cfg}
         - {src: /tmp/ANSIBLE/main.yml, dest: /ANSIBLE/main.yml}

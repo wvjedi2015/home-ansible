@@ -8,7 +8,7 @@
         dest: "{{ item.dest }}"
         preserve: yes
       with_items:
-        - {item.src: /REPOS/ANSIBLE/ansible.cfg, item.dest: /ANSIBLE/ansible.cfg}
-        - {item.src: /REPOS/ANSIBLE/main.yml, item.dest: /ANSIBLE/main.yml}
-        - {item.src: /REPOS/ANSIBLE/roles, item.dest: /ANSIBLE/roles}
-        - {item.src: /REPOS/ANSIBLE/inventory, item.dest: /ANSIBLE/inventory}
+        - {src: /REPOS/ANSIBLE/ansible.cfg, dest: /ANSIBLE/ansible.cfg}
+        - {src: /REPOS/ANSIBLE/main.yml, dest: /ANSIBLE/main.yml}
+        - {src: /REPOS/ANSIBLE/roles, dest: /ANSIBLE/roles}
+        - {src: /REPOS/ANSIBLE/inventory, dest: /ANSIBLE/inventory}

@@ -6,6 +6,7 @@
       copy:
         src: "{{ item.src }}"
         dest: "{{ item.dest }}"
+        remote_src: yes
         preserve: yes
       with_items:
         - {src: /REPOS/ANSIBLE/ansible.cfg, dest: /ANSIBLE/ansible.cfg}
